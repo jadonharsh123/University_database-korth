@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Database</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container .nav {
+            background-color: orange;
+            width: 100%;
+            height: 10vh;
+            padding: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .container .nav h1 {
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            word-spacing: 10px;
+            margin: 0 auto;
+            
+        }
+
+        .container nav{
+            width: 100%;
+            background-color: grey;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .container nav span{
+            height: 100%;
+            color: white;
+            padding: 1em .9em;
+            margin: 0;
+           
+        }
+
+        nav span:hover{
+            background-color: orange;
+        }
+
+        .container nav span a{
+            text-decoration: none;
+            color: white;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+            height: 100%;
+            font-size: 1.3em;
+        }
+
+        .container .box {
+            width: 100%;
+            min-height: 100vh;
+            height: auto;
+            display: flex;
+            align-items: center;
+        }
+
+.box1,.box3,.box5,.box7,.box9,.box11{
+    background-color: #0a0a0a;
+}
+
+.box2,.box4,.box6,.box8,.box10{
+    background-color: #3b3b3b;
+}
+
+
+        /* .box1 {
+            background-color: green;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+                    rgba(0, 0, 0, 0.8)),
+                url("background.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .box2 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+                    rgba(0, 0, 0, 0.8)),
+                url("background2.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .box3 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)),
+                url("background3.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .box4 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+                    rgba(0, 0, 0, 0.8)),
+                url("background4.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .box5 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+                    rgba(0, 0, 0, 0.6)),
+                url("background5.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .box6 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+                    rgba(0, 0, 0, 0.6)),
+                url("background6.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .box7 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+                    rgba(0, 0, 0, 0.8)),
+                url("background7.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .box8 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+                    rgba(0, 0, 0, 0.8)),
+                url("background8.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .box9 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+                    rgba(0, 0, 0, 0.8)),
+                url("background9.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .box10 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+                    rgba(0, 0, 0, 0.6)),
+                url("background10.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .box11 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+                    rgba(0, 0, 0, 0.6)),
+                url("background11.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        } */
+
+        .box .b-box {
+            width: 60%;
+            min-height: 0%;
+            background: transparent;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 20px;
+            margin: 4% auto;
+            backdrop-filter: blur(6px);
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 9px rgba(255, 255, 255, 0.8);
+            }
+
+            50% {
+                box-shadow: 0 0 35px rgba(255, 166, 0, 0.699);
+            }
+
+            100% {
+                box-shadow: 0 0 9px rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        .b-box h2 {
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bolder;
+            font-size: 45px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .b-box form {
+            padding: 20px;
+        }
+
+        .b-box form .inpbox {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .inp-lab {
+            width: 20%;
+        }
+
+        .inp-input {
+            width: 80%;
+        }
+
+        form label {
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 30px;
+        }
+
+        .b-box form input {
+            width: 55%;
+            height: 10vh;
+            margin: 3px;
+            color: rgb(255, 255, 255);
+            background: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid white;
+            padding: 20px;
+            font-size: 22px;
+            letter-spacing: 3px;
+        }
+
+        form input::placeholder {
+            color: rgba(235, 223, 223, 0.801);
+            text-transform: lowercase;
+            letter-spacing: 2px;
+        }
+
+        form input[type="submit"] {
+            width: 40%;
+            height: 65px;
+            background-color: orange;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 22px;
+            border-radius: 60px;
+            border: 1px solid white;
+            margin: 20px 0;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: white;
+            color: orange;
+            border: 1px solid orange;
+        }
+
+        .top{
+            position: fixed;
+            bottom: 2em;
+            right: 2em;
+            z-index: 100;
+            background-color: rgba(255, 166, 0, 0.623);
+            border: 2px solid white;
+            border-radius: 50px;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(2px);
+
+        }
+
+        .top a{
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+            font-size: 15px;
+            width: 100%;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="top">
+        <div class="nav">
+            <h1>uninversity database</h1>
+        </div>
+
+        <nav >
+            <span><a href="#add-classroom">classroom</a></span>
+            <span><a href="#add-dept-data">department</a></span>
+            <span><a href="#add-course-data">course</a></span>
+            <span><a href="#add-instructor-data">instructor</a></span>
+            <span><a href="#add-section-data">section</a></span>
+            <span><a href="#add-teachers-data">teachers</a></span>
+            <span><a href="#add-student-data">student</a></span>
+            <span><a href="#add-takes-data">takes</a></span>
+            <span><a href="#add-advisor-data">advisor</a></span>
+            <span><a href="#add-time-slot-data">time-slot</a></span>
+            <span><a href="#add-preq-data">PREREQUISITE</a></span>
+
+        </nav>
+
+        <div class="top">
+            <a href="#top">go to top</a>
+        </div>
+
+        <div class="box box1" id="add-classroom">
+            <div class="b-box">
+                <h2>Add Classroom Data</h2>
+                <form action="/classroom_submit" method="POST">
+                    <div class="inpbox">
+                        <label for="building">Building:</label>
+                        <input type="text" id="building" name="building" required placeholder="enter building name" />
+                    </div>
+
+                    <div class="inpbox">
+                        <label for="room_number">Room Number:</label>
+                        <input type="text" id="room_number" name="room_number" required
+                            placeholder="enter room number" />
+                    </div>
+
+                    <div class="inpbox">
+                        <label for="capacity">Capacity:</label>
+                        <input type="number" id="capacity" name="capacity" required placeholder="enter capacity" />
+                    </div>
+
+                    <div class="inpbox">
+                        <input type="submit" value="Submit" onclick="myfun()" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="box box2" id="add-dept-data">
+            <div class="b-box">
+                <h2>Add Department Data</h2>
+                <form action="/department_submit" method="POST">
+                    <div class="inpbox">
+                        <label for="dept_name">Department Name:</label>
+                        <input type="text" id="dept_name" name="dept_name" required
+                            placeholder="enter department name" />
+                    </div>
+
+                    <div class="inpbox">
+                        <label for="building">Building:</label>
+                        <input type="text" id="building" name="building" required placeholder="enter building name" />
+                    </div>
+
+                    <div class="inpbox">
+                        <label for="budget">Budget:</label>
+                        <input type="number" id="budget" name="budget" required placeholder="enter budget" />
+                    </div>
+
+                    <div class="inpbox">
+                        <input type="submit" value="Submit" onclick="myfun()" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="box box3" id="add-course-data">
+            <div class="b-box">
+                <h2>Add Course Data</h2>
+                <form action="/course_submit" method="POST">
+                    <div class="inpbox">
+                        <label for="course_id">Course ID:</label>
+                        <input type="text" id="course_id" name="course_id" required placeholder="enter course id" />
+                    </div>
+                    <div class="inpbox">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title" required placeholder="enter title" />
+                    </div>
+                    <div class="inpbox">
+                        <label for="dept_name">Department Name:</label>
+                        <input type="text" id="dept_name" name="dept_name" required
+                            placeholder="enter department name" />
+                    </div>
+                    <div class="inpbox">
+                        <label for="credits">Credits:</label>
+                        <input type="number" id="credits" name="credits" required placeholder="enter credits" />
+                    </div>
+                    <div class="inpbox">
+                        <input type="submit" value="Submit" onclick="myfun()" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="box box4" id="add-instructor-data">
+            <div class="b-box">
+                <h2>Add Instructor Data</h2>
+                <form action="/instructor_submit" method="POST">
+                    <div class="inpbox">
+                        <label for="ID">Instructor ID:</label>
+                        <input type="text" id="ID" name="ID" required placeholder="enter instructor id">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="enter name">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="dept_name">Department Name:</label>
+                        <input type="text" id="dept_name" name="dept_name" required placeholder="enter department name">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="salary">Salary:</label>
+                        <input type="number" id="salary" name="salary" required placeholder="enter salary">
+
+                    </div>
+                    <div class="inpbox">
+                        <input type="submit" value="Submit" onclick="myfun()">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="box box5" id="add-section-data">
+            <div class="b-box">
+                <h2>Add Section Data</h2>
+                <form action="/section_submit" method="POST">
+                    <div class="inpbox">
+                        <label for="course_id">Course ID:</label>
+                        <input type="text" id="course_id" name="course_id" required placeholder="course id">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="sec_id">Section ID:</label>
+                        <input type="text" id="sec_id" name="sec_id" required placeholder="section id">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="semester">Semester:</label>
+                        <input type="text" id="semester" name="semester" required placeholder="enter semester">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="year">Year:</label>
+                        <input type="number" id="year" name="year" required placeholder="enter year">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="building">Building:</label>
+                        <input type="text" id="building" name="building" required placeholder="enter building">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="room_number">Room Number:</label>
+                        <input type="text" id="room_number" name="room_number" required placeholder="enter room number">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="time_slot_id">Time Slot ID:</label>
+                        <input type="text" id="time_slot_id" name="time_slot_id" required
+                            placeholder="enter time slot id">
+
+                    </div>
+                    <div class="inpbox">
+                        <input type="submit" value="Submit" onclick="myfun()">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="box box6" id="add-teachers-data">
+            <div class="b-box">
+                <h2>Add Teachers Data</h2>
+                <form action="/teaches_submit" method="POST">
+                    <div class="inpbox">
+                        <label for="ID">Instructor ID:</label>
+                        <input type="text" id="ID" name="ID" required placeholder="enter instructor id">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="course_id">Course ID:</label>
+                        <input type="text" id="course_id" name="course_id" required placeholder="enter course id">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="sec_id">Section ID:</label>
+                        <input type="text" id="sec_id" name="sec_id" required placeholder="enter section">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="semester">Semester:</label>
+                        <input type="text" id="semester" name="semester" required placeholder="semester">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="year">Year:</label>
+                        <input type="number" id="year" name="year" required placeholder="year">
+
+                    </div>
+                    <div class="inpbox">
+                        <input type="submit" value="Submit" onclick="myfun()">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="box box7" id="add-student-data">
+            <div class="b-box">
+                <h2>Add Student Data</h2>
+                <form action="/student_submit" method="POST">
+
+                    <div class="inpbox">
+                        <label for="ID">Student ID:</label>
+                        <input type="text" id="ID" name="ID" required placeholder="enter student id">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="enter name">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="dept_name">Department Name:</label>
+                        <input type="text" id="dept_name" name="dept_name" required placeholder="enter department name">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="tot_cred">Total Credits:</label>
+                        <input type="number" id="tot_cred" name="tot_cred" required placeholder="enter total credits">
+
+                    </div>
+                    <div class="inpbox">
+                        <input type="submit" value="Submit" onclick="myfun()">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="box box8" id="add-takes-data">
+            <div class="b-box">
+                <h2>Add Takes Data</h2>
+                <form action="/takes_submit" method="POST">
+
+                    <div class="inpbox">
+                        <label for="ID">Student ID:</label>
+                        <input type="text" id="ID" name="ID" required placeholder="enter student id">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="course_id">Course ID:</label>
+                        <input type="text" id="course_id" name="course_id" required placeholder="enter course id">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="sec_id">Section ID:</label>
+                        <input type="text" id="sec_id" name="sec_id" required placeholder="enter section id">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="semester">Semester:</label>
+                        <input type="text" id="semester" name="semester" required placeholder="enter semester">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="year">Year:</label>
+                        <input type="number" id="year" name="year" required placeholder="enter year">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="grade">Grade:</label>
+                        <input type="text" id="grade" name="grade" required placeholder="enter grade">
+
+                    </div>
+                    <div class="inpbox">
+                        <input type="submit" value="Submit" onclick="myfun()">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="box box9" id="add-advisor-data">
+            <div class="b-box">
+                <h2>Add Advisor Data</h2>
+                <form action="/advisor_submit" method="POST">
+                    <div class="inpbox">
+                        <label for="s_ID">Student ID:</label>
+                        <input type="text" id="s_ID" name="s_ID" required placeholder="student id">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="i_ID">Instructor ID:</label>
+                        <input type="text" id="i_ID" name="i_ID" required placeholder="instructor id">
+
+                    </div>
+                    <div class="inpbox">
+                        <input type="submit" value="Submit" onclick="myfun()">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="box box10" id="add-time-slot-data">
+            <div class="b-box">
+                <h2>Add Time Slot Data</h2>
+                <form action="/time_slot_submit" method="POST">
+                    <div class="inpbox">
+                        <label for="time_slot_id">Time Slot ID:</label>
+                        <input type="text" id="time_slot_id" name="time_slot_id" required
+                            placeholder="enter time slot id">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="day">Day:</label><br>
+                        <input type="text" id="day" name="day" required placeholder="enter day">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="start_hr">Start Hour:</label>
+                        <input type="number" id="start_hr" name="start_hr" required placeholder="enter start hour">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="start_min">Start Minute:</label>
+                        <input type="number" id="start_min" name="start_min" required placeholder="enter start minute">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="end_hr">End Hour:</label>
+                        <input type="number" id="end_hr" name="end_hr" required placeholder="enter end hour">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="end_min">End Minute:</label>
+                        <input type="number" id="end_min" name="end_min" required placeholder="enter end minute">
+
+                    </div>
+                    <div class="inpbox">
+                        <input type="submit" value="Submit" onclick="myfun()">
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="box box11" id="add-preq-data">
+            <div class="b-box">
+                <h2>Add Prerequisite Data</h2>
+                <form action="/prereq_submit" method="POST">
+                    <div class="inpbox">
+                        <label for="course_id">Course ID:</label>
+                        <input type="text" id="course_id" name="course_id" required placeholder="enter course id">
+
+                    </div>
+                    <div class="inpbox">
+                        <label for="prereq_id">Prerequisite ID:</label>
+                        <input type="text" id="prereq_id" name="prereq_id" required placeholder="enter prerequisite id">
+
+                    </div>
+                    <div class="inpbox">
+                        <input type="submit" value="Submit" onclick="myfun()">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myfun() {
+            window.alert("Successfully Submitted !");
+        }
+    </script>
+</body>
+
+</html>
